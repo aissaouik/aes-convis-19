@@ -1,0 +1,31 @@
+{
+  "convidApp": {
+    "answer": {
+      "home": {
+        "title": "Answers",
+        "createLabel": "Create a new Answer",
+        "createOrEditLabel": "Create or edit a Answer",
+        "notFound": "No Answers found"
+      },
+      "created": "A new Answer is created with identifier {{ param }}",
+      "updated": "A Answer is updated with identifier {{ param }}",
+      "deleted": "A Answer is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Answer {{ id }}?"
+      },
+      "detail": {
+        "title": "Answer"
+      },
+      "anwser": "Anwser",
+      "comment": "Comment",
+      "date": "Date",
+      "question": "Question",
+      "user": "User",
+      "help": {
+        "anwser": "La réponse : YE,NO OR CHOICE",
+        "comment": "La réponse : YE,NO OR CHOICE",
+        "date": "La date de la réponse"
+      }
+    }
+  }
+}

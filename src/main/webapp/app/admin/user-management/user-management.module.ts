@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
-import { Covid19SharedModule } from 'app/shared/shared.module';
+import { ConvidSharedModule } from 'app/shared/shared.module';
 import { UserManagementComponent } from './user-management.component';
 import { UserManagementDetailComponent } from './user-management-detail.component';
 import { UserManagementUpdateComponent } from './user-management-update.component';
@@ -9,7 +9,7 @@ import { UserManagementDeleteDialogComponent } from './user-management-delete-di
 import { userManagementRoute } from './user-management.route';
 
 @NgModule({
-  imports: [Covid19SharedModule, RouterModule.forChild(userManagementRoute)],
+  imports: [ConvidSharedModule, RouterModule.forChild(userManagementRoute)],
   declarations: [
     UserManagementComponent,
     UserManagementDetailComponent,

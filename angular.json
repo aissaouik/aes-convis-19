@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "covid-19": {
+    "convid": {
       "root": "",
       "sourceRoot": "src/main/webapp",
       "projectType": "application",
@@ -25,11 +25,11 @@
           "skipTests": true
         }
       },
-      "prefix": "jhi",
+      "prefix": "aes",
       "architect": {}
     }
   },
-  "defaultProject": "covid-19",
+  "defaultProject": "convid",
   "cli": {
     "packageManager": "npm"
   }

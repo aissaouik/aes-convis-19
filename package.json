@@ -1,7 +1,7 @@
 {
-  "name": "covid-19",
+  "name": "convid",
   "version": "0.0.1-SNAPSHOT",
-  "description": "Description for covid19",
+  "description": "Description for convid",
   "private": true,
   "license": "UNLICENSED",
   "cacheDirectories": [
@@ -23,6 +23,7 @@
     "@ngx-translate/core": "12.1.2",
     "@ngx-translate/http-loader": "5.0.0",
     "bootstrap": "4.5.0",
+    "bootswatch": "4.5.0",
     "moment": "2.27.0",
     "ng-jhipster": "0.14.0",
     "ngx-cookie-service": "3.0.4",

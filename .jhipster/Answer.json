@@ -1,0 +1,52 @@
+{
+  "name": "Answer",
+  "fields": [
+    {
+      "fieldName": "anwser",
+      "fieldType": "String",
+      "javadoc": "La réponse : YE,NO OR CHOICE",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "comment",
+      "fieldType": "String",
+      "javadoc": "La réponse : YE,NO OR CHOICE",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "date",
+      "fieldType": "ZonedDateTime",
+      "javadoc": "La date de la réponse",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-one",
+      "otherEntityName": "question",
+      "otherEntityRelationshipName": "answer",
+      "relationshipName": "question",
+      "otherEntityField": "id",
+      "ownerSide": true
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "user",
+      "otherEntityRelationshipName": "answer",
+      "relationshipName": "user",
+      "otherEntityField": "id"
+    }
+  ],
+  "changelogDate": "20200916140045",
+  "javadoc": "Answer entity.\\n@author msmida.",
+  "entityTableName": "answer",
+  "dto": "mapstruct",
+  "pagination": "pagination",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": true,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": ["convid"]
+}

@@ -18,7 +18,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.springframework.transaction.annotation.Transactional;
-import tn.aes.convid.Covid19App;
+import tn.aes.convid.ConvidApp;
 import tn.aes.convid.domain.User;
 import tn.aes.convid.repository.UserRepository;
 import tn.aes.convid.web.rest.vm.LoginVM;
@@ -27,7 +27,7 @@ import tn.aes.convid.web.rest.vm.LoginVM;
  * Integration tests for the {@link UserJWTController} REST controller.
  */
 @AutoConfigureMockMvc
-@SpringBootTest(classes = Covid19App.class)
+@SpringBootTest(classes = ConvidApp.class)
 public class UserJWTControllerIT {
     @Autowired
     private UserRepository userRepository;

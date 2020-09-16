@@ -7,7 +7,7 @@ import { Subscription } from 'rxjs';
 import { AlertError } from './alert-error.model';
 
 @Component({
-  selector: 'jhi-alert-error',
+  selector: 'aes-alert-error',
   template: ` <div class="alerts" role="alert">
     <div *ngFor="let alert of alerts" [ngClass]="setClasses(alert)">
       <ngb-alert *ngIf="alert && alert.type && alert.msg" [type]="alert.type" (close)="close(alert)">
@@ -22,12 +22,12 @@ export class AlertErrorComponent implements OnDestroy {
   httpErrorListener: Subscription;
 
   constructor(private alertService: JhiAlertService, private eventManager: JhiEventManager, translateService: TranslateService) {
-    this.errorListener = eventManager.subscribe('covid19App.error', (response: JhiEventWithContent<AlertError>) => {
+    this.errorListener = eventManager.subscribe('convidApp.error', (response: JhiEventWithContent<AlertError>) => {
       const errorResponse = response.content;
       this.addErrorAlert(errorResponse.message, errorResponse.key, errorResponse.params);
     });
 
-    this.httpErrorListener = eventManager.subscribe('covid19App.httpError', (response: JhiEventWithContent<HttpErrorResponse>) => {
+    this.httpErrorListener = eventManager.subscribe('convidApp.httpError', (response: JhiEventWithContent<HttpErrorResponse>) => {
       const httpErrorResponse = response.content;
       switch (httpErrorResponse.status) {
         // connection refused, server not reachable
@@ -57,7 +57,7 @@ export class AlertErrorComponent implements OnDestroy {
               }
               // convert 'something[14].other[4].id' to 'something[].other[].id' so translations can be written to it
               const convertedField = fieldError.field.replace(/\[\d*\]/g, '[]');
-              const fieldName = translateService.instant('covid19App.' + fieldError.objectName + '.' + convertedField);
+              const fieldName = translateService.instant('convidApp.' + fieldError.objectName + '.' + convertedField);
               this.addErrorAlert('Error on field "' + fieldName + '"', 'error.' + fieldError.message, { fieldName });
             }
           } else if (httpErrorResponse.error !== '' && httpErrorResponse.error.message) {

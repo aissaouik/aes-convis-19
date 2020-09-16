@@ -31,17 +31,16 @@ import org.springframework.context.MessageSource;
 import org.springframework.mail.MailSendException;
 import org.springframework.mail.javamail.JavaMailSenderImpl;
 import org.thymeleaf.spring5.SpringTemplateEngine;
-import tn.aes.convid.Covid19App;
+import tn.aes.convid.ConvidApp;
 import tn.aes.convid.config.Constants;
 import tn.aes.convid.domain.User;
 
 /**
  * Integration tests for {@link MailService}.
  */
-@SpringBootTest(classes = Covid19App.class)
+@SpringBootTest(classes = ConvidApp.class)
 public class MailServiceIT {
     private static final String[] languages = {
-        "ar-ly",
         "en",
         "fr",
         // jhipster-needle-i18n-language-constant - JHipster will add/remove languages in this array

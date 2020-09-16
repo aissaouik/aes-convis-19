@@ -1,0 +1,45 @@
+{
+  "name": "Question",
+  "fields": [
+    {
+      "fieldName": "title",
+      "fieldType": "String",
+      "javadoc": "Titre de la question",
+      "fieldValidateRules": ["required", "unique"]
+    },
+    {
+      "fieldName": "type",
+      "fieldType": "QuestionType",
+      "javadoc": "Type de question",
+      "fieldValues": "YES_NO,WITH_CHOICE,COMMENT",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "choice",
+      "otherEntityRelationshipName": "question",
+      "relationshipName": "choices"
+    },
+    {
+      "relationshipType": "one-to-one",
+      "otherEntityName": "answer",
+      "otherEntityRelationshipName": "question",
+      "relationshipName": "answer",
+      "ownerSide": false
+    }
+  ],
+  "changelogDate": "20200916135845",
+  "javadoc": "Question entity.\\n@author msmida.",
+  "entityTableName": "question",
+  "dto": "mapstruct",
+  "pagination": "pagination",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": true,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": ["convid"]
+}

@@ -3,7 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { of } from 'rxjs';
 
 import { Authority } from 'app/shared/constants/authority.constants';
-import { Covid19TestModule } from '../../../test.module';
+import { ConvidTestModule } from '../../../test.module';
 import { UserManagementDetailComponent } from 'app/admin/user-management/user-management-detail.component';
 import { User } from 'app/core/user/user.model';
 
@@ -17,7 +17,7 @@ describe('Component Tests', () => {
 
     beforeEach(async(() => {
       TestBed.configureTestingModule({
-        imports: [Covid19TestModule],
+        imports: [ConvidTestModule],
         declarations: [UserManagementDetailComponent],
         providers: [
           {

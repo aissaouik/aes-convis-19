@@ -12,8 +12,8 @@ spring:
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
     driver-class-name: org.testcontainers.jdbc.ContainerDatabaseDriver
-    url: jdbc:tc:postgresql:12.3:///covid19?TC_TMPFS=/testtmpfs:rw
-    username: covid19
+    url: jdbc:tc:postgresql:12.3:///convid?TC_TMPFS=/testtmpfs:rw
+    username: convid
     password:
     hikari:
       poolName: Hikari

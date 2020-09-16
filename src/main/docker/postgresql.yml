@@ -1,11 +1,11 @@
 version: '2'
 services:
-  covid19-postgresql:
+  convid-postgresql:
     image: postgres:12.3
     # volumes:
-    #     - ~/volumes/jhipster/covid19/postgresql/:/var/lib/postgresql/data/
+    #     - ~/volumes/jhipster/convid/postgresql/:/var/lib/postgresql/data/
     environment:
-      - POSTGRES_USER=covid19
+      - POSTGRES_USER=convid
       - POSTGRES_PASSWORD=
       - POSTGRES_HOST_AUTH_METHOD=trust
     ports:
