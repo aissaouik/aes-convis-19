@@ -32,4 +32,4 @@ const LAYOUT_ROUTES = [navbarRoute, ...errorRoute];
   ],
   exports: [RouterModule],
 })
-export class Covid19AppRoutingModule {}
+export class ConvidAppRoutingModule {}

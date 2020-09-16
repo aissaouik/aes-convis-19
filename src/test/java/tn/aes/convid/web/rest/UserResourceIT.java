@@ -21,7 +21,7 @@ import org.springframework.http.MediaType;
 import org.springframework.security.test.context.support.WithMockUser;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.transaction.annotation.Transactional;
-import tn.aes.convid.Covid19App;
+import tn.aes.convid.ConvidApp;
 import tn.aes.convid.domain.Authority;
 import tn.aes.convid.domain.User;
 import tn.aes.convid.repository.UserRepository;
@@ -35,7 +35,7 @@ import tn.aes.convid.web.rest.vm.ManagedUserVM;
  */
 @AutoConfigureMockMvc
 @WithMockUser(authorities = AuthoritiesConstants.ADMIN)
-@SpringBootTest(classes = Covid19App.class)
+@SpringBootTest(classes = ConvidApp.class)
 public class UserResourceIT {
     private static final String DEFAULT_LOGIN = "johndoe";
     private static final String UPDATED_LOGIN = "jhipster";

@@ -1,0 +1,29 @@
+{
+  "convidApp": {
+    "banner": {
+      "home": {
+        "title": "Banners",
+        "createLabel": "Create a new Banner",
+        "createOrEditLabel": "Create or edit a Banner",
+        "notFound": "No Banners found"
+      },
+      "created": "A new Banner is created with identifier {{ param }}",
+      "updated": "A Banner is updated with identifier {{ param }}",
+      "deleted": "A Banner is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Banner {{ id }}?"
+      },
+      "detail": {
+        "title": "Banner"
+      },
+      "title": "Title",
+      "content": "Content",
+      "frequency": "Frequency",
+      "help": {
+        "title": "Titre da la bannière",
+        "content": "Contenu de la bannière",
+        "frequency": "Fréquence d&#39;affichage de la bannière en seconde(s)"
+      }
+    }
+  }
+}

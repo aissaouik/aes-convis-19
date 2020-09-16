@@ -1,0 +1,26 @@
+{
+  "convidApp": {
+    "choice": {
+      "home": {
+        "title": "Choices",
+        "createLabel": "Créer un nouveau Choice",
+        "createOrEditLabel": "Créer ou éditer un Choice",
+        "notFound": "Aucun Choice trouvé"
+      },
+      "created": "Un nouveau Choice a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Choice avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Choice avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Etes-vous certain de vouloir supprimer le Choice {{ id }} ?"
+      },
+      "detail": {
+        "title": "Choice"
+      },
+      "choice": "Choice",
+      "question": "Question",
+      "help": {
+        "choice": "Date/heure du début du cycle"
+      }
+    }
+  }
+}

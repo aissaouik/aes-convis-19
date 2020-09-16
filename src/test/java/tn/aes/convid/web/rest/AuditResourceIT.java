@@ -18,7 +18,7 @@ import org.springframework.security.test.context.support.WithMockUser;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.springframework.transaction.annotation.Transactional;
-import tn.aes.convid.Covid19App;
+import tn.aes.convid.ConvidApp;
 import tn.aes.convid.domain.PersistentAuditEvent;
 import tn.aes.convid.repository.PersistenceAuditEventRepository;
 import tn.aes.convid.security.AuthoritiesConstants;
@@ -28,7 +28,7 @@ import tn.aes.convid.security.AuthoritiesConstants;
  */
 @AutoConfigureMockMvc
 @WithMockUser(authorities = AuthoritiesConstants.ADMIN)
-@SpringBootTest(classes = Covid19App.class)
+@SpringBootTest(classes = ConvidApp.class)
 @Transactional
 public class AuditResourceIT {
     private static final String SAMPLE_PRINCIPAL = "SAMPLE_PRINCIPAL";

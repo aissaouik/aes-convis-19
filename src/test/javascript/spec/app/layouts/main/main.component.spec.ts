@@ -5,9 +5,8 @@ import { Subject, of } from 'rxjs';
 import { TranslateModule, TranslateService, LangChangeEvent } from '@ngx-translate/core';
 
 import { MainComponent } from 'app/layouts/main/main.component';
-import { Covid19TestModule } from '../../../test.module';
+import { ConvidTestModule } from '../../../test.module';
 import { MockRouter } from '../../../helpers/mock-route.service';
-import { FindLanguageFromKeyPipe } from 'app/shared/language/find-language-from-key.pipe';
 
 describe('Component Tests', () => {
   describe('MainComponent', () => {
@@ -20,9 +19,9 @@ describe('Component Tests', () => {
 
     beforeEach(async(() => {
       TestBed.configureTestingModule({
-        imports: [Covid19TestModule, TranslateModule.forRoot()],
+        imports: [ConvidTestModule, TranslateModule.forRoot()],
         declarations: [MainComponent],
-        providers: [Title, FindLanguageFromKeyPipe],
+        providers: [Title],
       })
         .overrideTemplate(MainComponent, '')
         .compileComponents();
@@ -43,7 +42,7 @@ describe('Component Tests', () => {
       const parentRoutePageTitle = 'parentTitle';
       const childRoutePageTitle = 'childTitle';
       const navigationEnd = new NavigationEnd(1, '', '');
-      const langChangeEvent: LangChangeEvent = { lang: 'fr', translations: null };
+      const langChangeEvent: LangChangeEvent = { lang: 'en', translations: null };
 
       beforeEach(() => {
         routerState = { snapshot: { root: {} } };
@@ -51,7 +50,7 @@ describe('Component Tests', () => {
         spyOn(translateService, 'get').and.callFake((key: string) => {
           return of(key + ' translated');
         });
-        translateService.currentLang = 'fr';
+        translateService.currentLang = 'en';
         spyOn(titleService, 'setTitle');
         comp.ngOnInit();
       });

@@ -10,14 +10,14 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.transaction.annotation.Transactional;
-import tn.aes.convid.Covid19App;
+import tn.aes.convid.ConvidApp;
 import tn.aes.convid.domain.PersistentAuditEvent;
 import tn.aes.convid.repository.PersistenceAuditEventRepository;
 
 /**
  * Integration tests for {@link AuditEventService}.
  */
-@SpringBootTest(classes = Covid19App.class)
+@SpringBootTest(classes = ConvidApp.class)
 @Transactional
 public class AuditEventServiceIT {
     @Autowired

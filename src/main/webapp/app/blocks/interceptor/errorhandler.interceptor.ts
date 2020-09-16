@@ -12,7 +12,7 @@ export class ErrorHandlerInterceptor implements HttpInterceptor {
     return next.handle(request).pipe(
       tap(null, (err: HttpErrorResponse) => {
         if (!(err.status === 401 && (err.message === '' || (err.url && err.url.includes('api/account'))))) {
-          this.eventManager.broadcast(new JhiEventWithContent('covid19App.httpError', err));
+          this.eventManager.broadcast(new JhiEventWithContent('convidApp.httpError', err));
         }
       })
     );

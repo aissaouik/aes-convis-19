@@ -1,0 +1,121 @@
+/**
+ * Back-End Application.
+ * @author msmida.
+ */
+
+application {
+  config {
+    baseName convid,
+    applicationType monolith,
+	
+	enableTranslation true,
+	skipUserManagement false,
+	nativeLanguage en,
+	languages [en, fr],
+	jhiPrefix aes,
+	
+	authenticationType jwt,
+	buildTool maven,
+	cacheProvider ehcache,
+	databaseType sql,
+	devDatabaseType h2Memory,
+	enableHibernateCache true,
+	enableSwaggerCodegen true,
+	packageName tn.aes.convid,
+	prodDatabaseType postgresql,
+	dtoSuffix DTO,
+	serviceDiscoveryType false,
+	enableTranslation true,
+	
+	testFrameworks [cucumber],
+	useSass true,
+	enableTranslation true,
+	clientPackageManager npm,
+	clientFramework angularX,
+	clientTheme superhero
+  }
+  entities *
+}
+
+/*
+enum EnumUserRole{
+	HR_ADMIN,
+    USER,
+    DOCTOR
+  }*/
+  
+enum QuestionType{
+	YES_NO,
+    WITH_CHOICE,
+    COMMENT
+  }
+
+/**
+ * Banner entity.
+ * @author msmida.
+ */
+entity Banner{
+    /** Titre da la bannière */
+    title String required unique,
+    /** Contenu de la bannière	*/
+    content	String required,
+    /** Fréquence d'affichage de la bannière en seconde(s) */
+    frequency	Integer required
+}
+
+/**
+ * Question entity.
+ * @author msmida.
+ */
+entity Question {
+	/** Titre de la question */
+    title String required unique,
+    /** Type de question */
+    type QuestionType required
+}
+
+/**
+ * Choice entity.
+ * @author msmida.
+ */
+entity Choice{
+    /** Date/heure du début du cycle */
+    choice String required
+}
+
+/**
+ * Answer entity.
+ * @author msmida.
+ */
+entity Answer{
+    /** La réponse : YE,NO OR CHOICE*/
+	anwser String required,
+    /** La réponse : YE,NO OR CHOICE*/
+	comment String required,
+    /** La date de la réponse*/
+	date ZonedDateTime required
+}
+
+relationship OneToMany {
+   Question{choices} to Choice{question}
+}
+
+relationship ManyToOne {
+  Answer{user} to User
+}
+
+relationship OneToOne {
+   Answer{question} to Question{answer}
+}
+
+// Set pagination options
+paginate * with pagination
+
+filter all
+
+
+// Use Data Transfert Objects (DTO)
+dto * with mapstruct
+
+// Set service options to all except few
+service all with serviceImpl

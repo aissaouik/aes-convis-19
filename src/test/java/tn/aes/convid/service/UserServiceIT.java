@@ -20,7 +20,7 @@ import org.springframework.data.auditing.DateTimeProvider;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.transaction.annotation.Transactional;
-import tn.aes.convid.Covid19App;
+import tn.aes.convid.ConvidApp;
 import tn.aes.convid.config.Constants;
 import tn.aes.convid.domain.User;
 import tn.aes.convid.repository.UserRepository;
@@ -29,7 +29,7 @@ import tn.aes.convid.service.dto.UserDTO;
 /**
  * Integration tests for {@link UserService}.
  */
-@SpringBootTest(classes = Covid19App.class)
+@SpringBootTest(classes = ConvidApp.class)
 @Transactional
 public class UserServiceIT {
     private static final String DEFAULT_LOGIN = "johndoe";

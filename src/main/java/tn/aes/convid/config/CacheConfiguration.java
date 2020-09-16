@@ -47,6 +47,11 @@ public class CacheConfiguration {
             createCache(cm, tn.aes.convid.domain.User.class.getName());
             createCache(cm, tn.aes.convid.domain.Authority.class.getName());
             createCache(cm, tn.aes.convid.domain.User.class.getName() + ".authorities");
+            createCache(cm, tn.aes.convid.domain.Banner.class.getName());
+            createCache(cm, tn.aes.convid.domain.Question.class.getName());
+            createCache(cm, tn.aes.convid.domain.Question.class.getName() + ".choices");
+            createCache(cm, tn.aes.convid.domain.Choice.class.getName());
+            createCache(cm, tn.aes.convid.domain.Answer.class.getName());
             // jhipster-needle-ehcache-add-entry
         };
     }

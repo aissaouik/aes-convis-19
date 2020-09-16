@@ -1,0 +1,29 @@
+{
+  "convidApp": {
+    "question": {
+      "home": {
+        "title": "Questions",
+        "createLabel": "Créer un nouveau Question",
+        "createOrEditLabel": "Créer ou éditer un Question",
+        "notFound": "Aucun Question trouvé"
+      },
+      "created": "Un nouveau Question a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Question avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Question avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Etes-vous certain de vouloir supprimer le Question {{ id }} ?"
+      },
+      "detail": {
+        "title": "Question"
+      },
+      "title": "Title",
+      "type": "Type",
+      "choices": "Choices",
+      "answer": "Answer",
+      "help": {
+        "title": "Titre de la question",
+        "type": "Type de question"
+      }
+    }
+  }
+}

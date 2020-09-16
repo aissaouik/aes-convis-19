@@ -18,7 +18,7 @@ import org.springframework.mock.web.MockHttpServletRequest;
 import org.springframework.mock.web.MockHttpSession;
 import org.springframework.security.web.authentication.WebAuthenticationDetails;
 import org.springframework.transaction.annotation.Transactional;
-import tn.aes.convid.Covid19App;
+import tn.aes.convid.ConvidApp;
 import tn.aes.convid.config.Constants;
 import tn.aes.convid.config.audit.AuditEventConverter;
 import tn.aes.convid.domain.PersistentAuditEvent;
@@ -26,7 +26,7 @@ import tn.aes.convid.domain.PersistentAuditEvent;
 /**
  * Integration tests for {@link CustomAuditEventRepository}.
  */
-@SpringBootTest(classes = Covid19App.class)
+@SpringBootTest(classes = ConvidApp.class)
 @Transactional
 public class CustomAuditEventRepositoryIT {
     @Autowired

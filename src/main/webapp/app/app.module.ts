@@ -2,11 +2,11 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import './vendor';
-import { Covid19SharedModule } from 'app/shared/shared.module';
-import { Covid19CoreModule } from 'app/core/core.module';
-import { Covid19AppRoutingModule } from './app-routing.module';
-import { Covid19HomeModule } from './home/home.module';
-import { Covid19EntityModule } from './entities/entity.module';
+import { ConvidSharedModule } from 'app/shared/shared.module';
+import { ConvidCoreModule } from 'app/core/core.module';
+import { ConvidAppRoutingModule } from './app-routing.module';
+import { ConvidHomeModule } from './home/home.module';
+import { ConvidEntityModule } from './entities/entity.module';
 // jhipster-needle-angular-add-module-import JHipster will add new module here
 import { MainComponent } from './layouts/main/main.component';
 import { NavbarComponent } from './layouts/navbar/navbar.component';
@@ -18,14 +18,14 @@ import { ErrorComponent } from './layouts/error/error.component';
 @NgModule({
   imports: [
     BrowserModule,
-    Covid19SharedModule,
-    Covid19CoreModule,
-    Covid19HomeModule,
+    ConvidSharedModule,
+    ConvidCoreModule,
+    ConvidHomeModule,
     // jhipster-needle-angular-add-module JHipster will add new module here
-    Covid19EntityModule,
-    Covid19AppRoutingModule,
+    ConvidEntityModule,
+    ConvidAppRoutingModule,
   ],
   declarations: [MainComponent, NavbarComponent, ErrorComponent, PageRibbonComponent, ActiveMenuDirective, FooterComponent],
   bootstrap: [MainComponent],
 })
-export class Covid19AppModule {}
+export class ConvidAppModule {}

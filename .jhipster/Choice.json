@@ -1,0 +1,32 @@
+{
+  "name": "Choice",
+  "fields": [
+    {
+      "fieldName": "choice",
+      "fieldType": "String",
+      "javadoc": "Date/heure du début du cycle",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "question",
+      "otherEntityRelationshipName": "choices",
+      "relationshipName": "question",
+      "otherEntityField": "id"
+    }
+  ],
+  "changelogDate": "20200916135945",
+  "javadoc": "Choice entity.\\n@author msmida.",
+  "entityTableName": "choice",
+  "dto": "mapstruct",
+  "pagination": "pagination",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": true,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": ["convid"]
+}
